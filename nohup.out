@@ -1,0 +1,128 @@
+ERROR:albumentations.check_version:Error fetching version info
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/urllib/request.py", line 1348, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/http/client.py", line 1283, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/http/client.py", line 1329, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/http/client.py", line 1455, in connect
+    self.sock = self._context.wrap_socket(self.sock,
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/ssl.py", line 1375, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/site-packages/albumentations/check_version.py", line 29, in fetch_version_info
+    with opener.open(url, timeout=2) as response:
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/urllib/request.py", line 519, in open
+    response = self._open(req, data)
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/urllib/request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/urllib/request.py", line 1391, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/urllib/request.py", line 1351, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>
+True
+*******load pretrain_model/sam-med2d_b.pth
+Traceback (most recent call last):
+  File "/root/ncp/SAM-Med2D/train.py", line 298, in <module>
+    main(args)
+  File "/root/ncp/SAM-Med2D/train.py", line 237, in main
+    model = sam_model_registry[args.model_type](args).to(args.device) 
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1160, in to
+    return self._apply(convert)
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/site-packages/torch/nn/modules/module.py", line 833, in _apply
+    param_applied = fn(param)
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1158, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+RuntimeError: CUDA error: out of memory
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+ERROR:albumentations.check_version:Error fetching version info
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/urllib/request.py", line 1348, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/http/client.py", line 1283, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/http/client.py", line 1329, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/http/client.py", line 1455, in connect
+    self.sock = self._context.wrap_socket(self.sock,
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/ssl.py", line 1375, in do_handshake
+    self._sslobj.do_handshake()
+TimeoutError: _ssl.c:990: The handshake operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/site-packages/albumentations/check_version.py", line 29, in fetch_version_info
+    with opener.open(url, timeout=2) as response:
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/urllib/request.py", line 519, in open
+    response = self._open(req, data)
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/urllib/request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/urllib/request.py", line 1391, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/urllib/request.py", line 1351, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error _ssl.c:990: The handshake operation timed out>
+True
+*******load pretrain_model/sam-med2d_b.pth
+Traceback (most recent call last):
+  File "/root/ncp/SAM-Med2D/train.py", line 298, in <module>
+    main(args)
+  File "/root/ncp/SAM-Med2D/train.py", line 237, in main
+    model = sam_model_registry[args.model_type](args).to(args.device) 
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1160, in to
+    return self._apply(convert)
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/site-packages/torch/nn/modules/module.py", line 833, in _apply
+    param_applied = fn(param)
+  File "/root/miniconda3/envs/MAMBA/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1158, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+RuntimeError: CUDA error: out of memory
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
